@@ -1,0 +1,168 @@
+
+// VARIABLES
+
+$white: #fff;
+$black: #2f343a;
+$dark-grey: #717D8C;
+$light-grey: #ddd;
+$light-green: #BAE7A8;
+$lighter-green: #E1F7DB;
+
+
+// GENERAL STYLES
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  color: $black;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 61px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  width: 190px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $dark-grey;
+  color: $white;
+}
+
+
+
+// HEADER
+
+header {
+  background-color: $dark-grey;
+  color: $white;
+  height: 136px;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+body {
+  padding-top: 136px;
+}
+
+
+
+// ANIMATION AREA
+
+#container {
+  position: relative;
+  height: 675px;
+  display: flex;
+  align-items: center;
+}
+
+#animation {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  animation: pulse 7s ease-in-out infinite alternate;
+  background-color: $light-green;
+}
+
+#mantra {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+#mantra1 {
+  animation: fade-text-out 7s ease-in-out infinite alternate;
+}
+#mantra2 {
+  animation: fade-text-in 7s ease-in-out infinite alternate;
+}
+
+
+// ANIMATIONS
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: $light-green;
+  }
+  50% {
+    background-color: $lighter-green;
+    transform: scale(2);
+    border-radius: 100%;
+  }
+}
+
+@keyframes fade-text-out {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-text-in {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+// FORM
+
+#form h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 60px;
+
+  div {
+    padding: 10px 0 0;
+  }
+}
+
+label {
+  font-weight: 300;
+}
